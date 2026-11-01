@@ -1,5 +1,5 @@
 /* 每日打卡 · 离线缓存 */
-const CACHE = 'daily-checkin-v1';
+const CACHE = 'daily-checkin-v2';
 const ASSETS = [
   './',
   './index.html',

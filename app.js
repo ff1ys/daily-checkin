@@ -599,7 +599,7 @@
       setRow('导入数据', '从备份文件恢复', '<button class="btn sm ghost" data-act="import">导入</button>') +
       setRow('清空数据', '删除本机全部记录', '<button class="btn sm danger" data-act="clear">清空</button>') +
       '</div>' +
-      '<div class="empty" style="padding:22px 10px 6px">每日打卡 v1.0<br>数据只保存在这台设备的浏览器里</div>' +
+      '<div class="empty" style="padding:22px 10px 6px">奉DAILY v1.0<br>数据只保存在这台设备的浏览器里</div>' +
       '<div style="height:8px"></div>';
   }
 
@@ -844,7 +844,7 @@
     $$('[data-live="study"]').forEach(function (n) { n.textContent = hms(disp); });
     $$('[data-live="session"]').forEach(function (n) { n.textContent = hms(e); });
     $$('[data-live="today"]').forEach(function (n) { n.textContent = hms(S.dayStudy(todayKey()) + e); });
-    document.title = t.running ? '⏱ ' + hms(disp) + ' · 每日打卡' : '每日打卡 · 学习 / 单词 / 喝水';
+    document.title = t.running ? '⏱ ' + hms(disp) + ' · 奉DAILY' : '奉DAILY · 学习 / 单词 / 喝水';
   }
 
   function startTimer(mode) {
@@ -872,7 +872,7 @@
       var blob = new Blob([S.exportJSON()], { type: 'application/json' });
       var a = document.createElement('a');
       a.href = URL.createObjectURL(blob);
-      a.download = '每日打卡-' + todayKey() + '.json';
+      a.download = '奉DAILY-' + todayKey() + '.json';
       document.body.appendChild(a);
       a.click();
       setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1500);
