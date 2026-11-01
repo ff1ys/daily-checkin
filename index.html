@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>每日打卡 · 学习 / 单词 / 喝水</title>
+<meta name="description" content="记录学习时长与内容、收集生词、喝水打卡的轻量日常 App。">
+<meta name="theme-color" content="#f3f4f8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1015" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="每日打卡">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="phone">
+  <main id="views">
+    <section class="view" data-view="today"></section>
+    <section class="view" data-view="study"></section>
+    <section class="view" data-view="words"></section>
+    <section class="view" data-view="water"></section>
+    <section class="view" data-view="me"></section>
+  </main>
+  <nav class="tabbar" id="tabbar" aria-label="主导航"></nav>
+</div>
+<div id="overlay-root"></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<noscript><p style="padding:24px;font-family:sans-serif">这个 App 需要开启 JavaScript 才能使用。</p></noscript>
+<script src="store.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
